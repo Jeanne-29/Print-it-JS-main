@@ -51,4 +51,12 @@ function updateSlide(direction) {
 
 //Etape n°3 Ajoutez des bullet points au slider
 
+slides.forEach((slide) => {
+	if (slides.length > 1 ) {
+		const div = document.createElement('div');
+		div.className = 'dot';
+		dots.appendChild(div);
+	}
+})
+
 
