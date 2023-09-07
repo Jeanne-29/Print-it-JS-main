@@ -16,5 +16,11 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+// Récupération des données avant l'etape n°2
 
-//fonction
+const bannerImg = document.querySelector('.banner-img') //const permet de créer une constante nommée accessible uniquement en lecture
+const bannerText = document.querySelector('#banner p')
+const dots = document.querySelector('.dots')
+
+const arrowRight = document.querySelector('arrow_right')
+const arrowLeft = document.querySelector('.arrow_left')
