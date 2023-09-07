@@ -22,5 +22,33 @@ const bannerImg = document.querySelector('.banner-img') //const permet de créer
 const bannerText = document.querySelector('#banner p')
 const dots = document.querySelector('.dots')
 
-const arrowRight = document.querySelector('arrow_right')
+const arrowRight = document.querySelector('.arrow_right')
 const arrowLeft = document.querySelector('.arrow_left')
+
+
+//Etape n°2 Ajoutez un écouteurs d'evenements 
+
+
+// Vérifiez s'ils existent avant d'ajouter des event listeners
+if (arrowLeft && arrowRight) {
+  arrowLeft.addEventListener("click", () => {
+    console.log("Flèche de gauche");
+    updateSlide(-1);
+  });
+
+  arrowRight.addEventListener("click", () => {
+    console.log("Flèche de droite");
+    updateSlide(1);
+  });
+} else {
+  console.error("Les éléments avec les classes 'arrow_left' et 'arrow_right' n'ont pas été trouvés dans le DOM.");
+}
+
+function updateSlide(direction) {
+  // Votre logique pour mettre à jour le diaporama avec la direction donnée
+}
+
+
+//Etape n°3 Ajoutez des bullet points au slider
+
+
