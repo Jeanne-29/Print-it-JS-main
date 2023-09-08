@@ -68,3 +68,20 @@ arrowLeft.addEventListener('click',() => {
 	slide()
 })
 
+
+arrowRight.addEventListener('click', () => {
+	// Retire la classe 'dot_selected' de l'élément dot actuel
+   dot[currentSlide].classList.remove("dot_selected")
+
+
+   // Vérifie si la diapositive actuelle est la dernière
+   if(currentSlide === slides.length -1) {
+	   // Si c'est le cas, retourne à la première diapositive
+	   currentSlide = 0
+   } else {
+	   // Sinon, passe à la diapositive suivante
+	   currentSlide ++
+   } 
+	// Appelle la fonction slide() pour mettre à jour le diaporama
+   slide ()
+})
