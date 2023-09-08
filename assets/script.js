@@ -26,6 +26,27 @@ const arrowRight = document.querySelector('.arrow_right')
 const arrowLeft = document.querySelector('.arrow_left')
 
 
+//Ajoutez un écouteurs d'evenements 
+
+// Vérifiez s'ils existent avant d'ajouter des event listeners
+if (arrowLeft && arrowRight) {
+	arrowLeft.addEventListener("click", () => {
+	  console.log("Flèche de gauche");
+	  updateSlide(-1);
+	});
+  
+	arrowRight.addEventListener("click", () => {
+	  console.log("Flèche de droite");
+	  updateSlide(1);
+	});
+  } else {
+	console.error("Les éléments avec les classes 'arrow_left' et 'arrow_right' n'ont pas été trouvés dans le DOM.");
+  }
+  
+  function updateSlide(direction) {
+	  // Mettre à jour le diaporama avec la direction donnée
+	}
+	
 
 // Ajoutez des bullet points au slider
 
@@ -50,7 +71,7 @@ function slide() {
 	dot[currentSlide].classList.add('dot_selected')
 }
 
-//Ajoutez un écouteurs d'evenements 
+
 
 arrowLeft.addEventListener('click',() => {
 	// Retire la classe 'dot_selected' de l'élément dot actuel
